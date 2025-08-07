@@ -1,0 +1,11 @@
+{
+  "name": "mysql",
+  "description": "vento driver for mysql",
+  "author": "protofy",
+  "tags": [
+    "db",
+    "mysql"
+  ],
+  "version": "0.0.1",
+  "packagedFiles": []
+}
