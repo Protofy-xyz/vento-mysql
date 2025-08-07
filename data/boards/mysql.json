@@ -1,0 +1,388 @@
+{
+    "name": "mysql",
+    "cards": [
+        {
+            "key": "action_1754579273173",
+            "width": 2,
+            "height": 6,
+            "icon": "zap",
+            "type": "action",
+            "name": "tables",
+            "displayResponse": true,
+            "displayIcon": false
+        },
+        {
+            "key": "action_1754579273173_vento_copy_7dho7xrr1diu9aqylb5vb",
+            "width": 2,
+            "height": 6,
+            "icon": "zap",
+            "type": "action",
+            "name": "table_items",
+            "displayResponse": true,
+            "displayIcon": false,
+            "params": {
+                "table": "",
+                "page": ""
+            },
+            "configParams": {
+                "table": {
+                    "visible": true,
+                    "defaultValue": "",
+                    "type": "string"
+                },
+                "page": {
+                    "visible": true,
+                    "defaultValue": "",
+                    "type": "number"
+                }
+            }
+        },
+        {
+            "key": "action_1754583825617",
+            "width": 2,
+            "height": 6,
+            "icon": "zap",
+            "type": "action",
+            "name": "select",
+            "displayResponse": true,
+            "params": {
+                "table": "",
+                "field": "",
+                "value": ""
+            },
+            "configParams": {
+                "table": {
+                    "visible": true,
+                    "defaultValue": "",
+                    "type": "string"
+                },
+                "field": {
+                    "visible": true,
+                    "defaultValue": "",
+                    "type": "string"
+                },
+                "value": {
+                    "visible": true,
+                    "defaultValue": "",
+                    "type": "string"
+                }
+            }
+        },
+        {
+            "key": "value_1754584536847",
+            "width": 4,
+            "height": 4,
+            "icon": "key",
+            "name": "set_db_name",
+            "description": "Displays a key setter for a specific key or in case already set displays key is set",
+            "type": "value",
+            "params": {
+                "nameKey": ""
+            },
+            "configParams": {
+                "nameKey": {
+                    "visible": true,
+                    "defaultValue": "DB_NAME",
+                    "type": "string"
+                }
+            }
+        },
+        {
+            "key": "value_1754584536847_vento_copy_xkksfmpi42n8471ii3klt8",
+            "width": 4,
+            "height": 4,
+            "icon": "key",
+            "name": "set_password",
+            "description": "Displays a key setter for a specific key or in case already set displays key is set",
+            "type": "value",
+            "params": {
+                "nameKey": ""
+            },
+            "configParams": {
+                "nameKey": {
+                    "visible": true,
+                    "defaultValue": "DB_PASSWORD",
+                    "type": "string"
+                }
+            }
+        },
+        {
+            "key": "value_1754584536847_vento_copy_83c96w5gamfkhrcfriu9q8",
+            "width": 4,
+            "height": 4,
+            "icon": "key",
+            "name": "set_user",
+            "description": "Displays a key setter for a specific key or in case already set displays key is set",
+            "type": "value",
+            "params": {
+                "nameKey": ""
+            },
+            "configParams": {
+                "nameKey": {
+                    "visible": true,
+                    "defaultValue": "DB_USER",
+                    "type": "string"
+                }
+            }
+        },
+        {
+            "key": "action_1754585132838",
+            "width": 2,
+            "height": 6,
+            "icon": "database-zap",
+            "type": "action",
+            "name": "status",
+            "displayResponse": true,
+            "buttonLabel": "Ping!"
+        }
+    ],
+    "autopilot": false,
+    "layouts": {
+        "lg": [
+            {
+                "w": 23,
+                "h": 26,
+                "x": 21,
+                "y": 0,
+                "i": "action_1754579273173",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 23,
+                "h": 26,
+                "x": 44,
+                "y": 0,
+                "i": "action_1754579273173_vento_copy_7dho7xrr1diu9aqylb5vb",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 23,
+                "h": 26,
+                "x": 67,
+                "y": 0,
+                "i": "action_1754583825617",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 21,
+                "h": 4,
+                "x": 0,
+                "y": 0,
+                "i": "value_1754584536847",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 21,
+                "h": 4,
+                "x": 0,
+                "y": 8,
+                "i": "value_1754584536847_vento_copy_xkksfmpi42n8471ii3klt8",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 21,
+                "h": 4,
+                "x": 0,
+                "y": 4,
+                "i": "value_1754584536847_vento_copy_83c96w5gamfkhrcfriu9q8",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 21,
+                "h": 14,
+                "x": 0,
+                "y": 12,
+                "i": "action_1754585132838",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            }
+        ],
+        "md": [
+            {
+                "i": "action_1754579273173",
+                "x": 0,
+                "y": 0,
+                "w": 15,
+                "h": 7,
+                "isResizable": true
+            },
+            {
+                "i": "action_1754579273173_vento_copy_7dho7xrr1diu9aqylb5vb",
+                "x": 15,
+                "y": 6,
+                "w": 15,
+                "h": 7,
+                "isResizable": true
+            },
+            {
+                "i": "action_1754583825617",
+                "x": 30,
+                "y": 12,
+                "w": 15,
+                "h": 7,
+                "isResizable": true
+            },
+            {
+                "i": "value_1754584536847",
+                "x": 0,
+                "y": 19,
+                "w": 30,
+                "h": 5,
+                "isResizable": true
+            },
+            {
+                "i": "value_1754584536847_vento_copy_xkksfmpi42n8471ii3klt8",
+                "x": 30,
+                "y": 23,
+                "w": 30,
+                "h": 5,
+                "isResizable": true
+            },
+            {
+                "i": "value_1754584536847_vento_copy_83c96w5gamfkhrcfriu9q8",
+                "x": 0,
+                "y": 28,
+                "w": 30,
+                "h": 5,
+                "isResizable": true
+            },
+            {
+                "i": "action_1754585132838",
+                "x": 30,
+                "y": 32,
+                "w": 15,
+                "h": 7,
+                "isResizable": true
+            }
+        ],
+        "sm": [
+            {
+                "i": "action_1754579273173",
+                "x": 0,
+                "y": 0,
+                "w": 1,
+                "h": 7,
+                "isResizable": true
+            },
+            {
+                "i": "action_1754579273173_vento_copy_7dho7xrr1diu9aqylb5vb",
+                "x": 1,
+                "y": 6,
+                "w": 1,
+                "h": 7,
+                "isResizable": true
+            },
+            {
+                "i": "action_1754583825617",
+                "x": 0,
+                "y": 13,
+                "w": 1,
+                "h": 7,
+                "isResizable": true
+            },
+            {
+                "i": "value_1754584536847",
+                "x": 0,
+                "y": 20,
+                "w": 2,
+                "h": 5,
+                "isResizable": true
+            },
+            {
+                "i": "value_1754584536847_vento_copy_xkksfmpi42n8471ii3klt8",
+                "x": 0,
+                "y": 25,
+                "w": 2,
+                "h": 5,
+                "isResizable": true
+            },
+            {
+                "i": "value_1754584536847_vento_copy_83c96w5gamfkhrcfriu9q8",
+                "x": 0,
+                "y": 30,
+                "w": 2,
+                "h": 5,
+                "isResizable": true
+            },
+            {
+                "i": "action_1754585132838",
+                "x": 0,
+                "y": 35,
+                "w": 1,
+                "h": 7,
+                "isResizable": true
+            }
+        ],
+        "xs": [
+            {
+                "i": "action_1754579273173",
+                "x": 0,
+                "y": 0,
+                "w": 1,
+                "h": 7,
+                "isResizable": true
+            },
+            {
+                "i": "action_1754579273173_vento_copy_7dho7xrr1diu9aqylb5vb",
+                "x": 0,
+                "y": 7,
+                "w": 1,
+                "h": 7,
+                "isResizable": true
+            },
+            {
+                "i": "action_1754583825617",
+                "x": 0,
+                "y": 14,
+                "w": 1,
+                "h": 7,
+                "isResizable": true
+            },
+            {
+                "i": "value_1754584536847",
+                "x": 0,
+                "y": 21,
+                "w": 1,
+                "h": 5,
+                "isResizable": true
+            },
+            {
+                "i": "value_1754584536847_vento_copy_xkksfmpi42n8471ii3klt8",
+                "x": 0,
+                "y": 26,
+                "w": 1,
+                "h": 5,
+                "isResizable": true
+            },
+            {
+                "i": "value_1754584536847_vento_copy_83c96w5gamfkhrcfriu9q8",
+                "x": 0,
+                "y": 31,
+                "w": 1,
+                "h": 5,
+                "isResizable": true
+            },
+            {
+                "i": "action_1754585132838",
+                "x": 0,
+                "y": 36,
+                "w": 1,
+                "h": 7,
+                "isResizable": true
+            }
+        ]
+    }
+}
