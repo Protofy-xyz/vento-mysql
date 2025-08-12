@@ -7,5 +7,11 @@
     "mysql"
   ],
   "version": "0.0.1",
-  "packagedFiles": []
+  "packagedFiles": [
+    "extensions/mysql/**",
+    "data/boards/mysql/**",
+    "data/boards/mysql.js",
+    "data/boards/mysql.json",
+    "data/automations/mysql.ts"
+  ]
 }
