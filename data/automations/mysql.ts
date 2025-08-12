@@ -152,5 +152,37 @@ export default Protofy("code", async (app: Application, context) => {
         await db.close()
         return
     })
+
+    app.post("/api/v1/mysql/tables/join", dbCredentials, async (req, res) => {
+        const { DB_NAME, DB_USER, DB_PASSWORD } = req as any // avoid type errors caused by express typing
+        const { table, join_table, field, join_field, field_value } = req.body
+        const page = Number(req.query.page) || 1
+
+        console.log({ DB_NAME, DB_USER, DB_PASSWORD })
+        const db = new Db(DB_USER?.value, DB_PASSWORD?.value, DB_NAME?.value)
+        const connected = await db.connect();
+        if (!connected) {
+            return res.json({
+                error: "-", // avoid giving to much information about the internal error
+                is_error: true,
+                data: null,
+            })
+        }
+        let result = await db.join(table, join_table, field, join_field, field_value)
+        if (!result) {
+            return res.json({
+                error: "-", // avoid giving to much information about the internal error
+                is_error: true,
+                data: null,
+            })
+        }
+        res.json({
+            is_error: false,
+            error: null,
+            data: result
+        })
+        await db.close()
+        return
+    })
 })
 

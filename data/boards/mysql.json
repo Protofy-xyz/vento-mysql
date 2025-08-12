@@ -134,6 +134,49 @@
             "name": "status",
             "displayResponse": true,
             "buttonLabel": "Ping!"
+        },
+        {
+            "key": "action_1754583825617_vento_copy_si3vkvga23ewb74dfedirf",
+            "width": 2,
+            "height": 6,
+            "icon": "zap",
+            "type": "action",
+            "name": "join",
+            "displayResponse": true,
+            "params": {
+                "table": "",
+                "field": "",
+                "field_value": "",
+                "join_table": "",
+                "join_field": ""
+            },
+            "configParams": {
+                "table": {
+                    "visible": true,
+                    "defaultValue": "",
+                    "type": "string"
+                },
+                "field": {
+                    "visible": true,
+                    "defaultValue": "",
+                    "type": "string"
+                },
+                "field_value": {
+                    "visible": true,
+                    "defaultValue": "",
+                    "type": "string"
+                },
+                "join_table": {
+                    "visible": true,
+                    "defaultValue": "",
+                    "type": "string"
+                },
+                "join_field": {
+                    "visible": true,
+                    "defaultValue": "",
+                    "type": "string"
+                }
+            }
         }
     ],
     "autopilot": false,
@@ -141,7 +184,7 @@
         "lg": [
             {
                 "w": 23,
-                "h": 26,
+                "h": 12,
                 "x": 21,
                 "y": 0,
                 "i": "action_1754579273173",
@@ -151,9 +194,9 @@
             },
             {
                 "w": 23,
-                "h": 26,
-                "x": 44,
-                "y": 0,
+                "h": 14,
+                "x": 21,
+                "y": 12,
                 "i": "action_1754579273173_vento_copy_7dho7xrr1diu9aqylb5vb",
                 "moved": false,
                 "static": false,
@@ -162,7 +205,7 @@
             {
                 "w": 23,
                 "h": 26,
-                "x": 67,
+                "x": 44,
                 "y": 0,
                 "i": "action_1754583825617",
                 "moved": false,
@@ -205,6 +248,16 @@
                 "x": 0,
                 "y": 12,
                 "i": "action_1754585132838",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 23,
+                "h": 26,
+                "x": 67,
+                "y": 0,
+                "i": "action_1754583825617_vento_copy_si3vkvga23ewb74dfedirf",
                 "moved": false,
                 "static": false,
                 "isResizable": true
@@ -266,6 +319,14 @@
                 "w": 15,
                 "h": 7,
                 "isResizable": true
+            },
+            {
+                "i": "action_1754583825617_vento_copy_si3vkvga23ewb74dfedirf",
+                "x": 45,
+                "y": 38,
+                "w": 15,
+                "h": 7,
+                "isResizable": true
             }
         ],
         "sm": [
@@ -324,6 +385,14 @@
                 "w": 1,
                 "h": 7,
                 "isResizable": true
+            },
+            {
+                "i": "action_1754583825617_vento_copy_si3vkvga23ewb74dfedirf",
+                "x": 1,
+                "y": 41,
+                "w": 1,
+                "h": 7,
+                "isResizable": true
             }
         ],
         "xs": [
@@ -379,6 +448,14 @@
                 "i": "action_1754585132838",
                 "x": 0,
                 "y": 36,
+                "w": 1,
+                "h": 7,
+                "isResizable": true
+            },
+            {
+                "i": "action_1754583825617_vento_copy_si3vkvga23ewb74dfedirf",
+                "x": 0,
+                "y": 43,
                 "w": 1,
                 "h": 7,
                 "isResizable": true
