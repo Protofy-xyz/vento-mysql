@@ -177,16 +177,35 @@
                     "type": "string"
                 }
             }
+        },
+        {
+            "key": "value_1756394123902",
+            "width": 4,
+            "height": 4,
+            "icon": "key",
+            "name": "set_db_host",
+            "description": "Displays a key setter for a specific key or in case already set displays key is set",
+            "type": "value",
+            "params": {
+                "nameKey": "The key name to set"
+            },
+            "configParams": {
+                "nameKey": {
+                    "visible": true,
+                    "defaultValue": "DB_HOST",
+                    "type": "string"
+                }
+            }
         }
     ],
     "autopilot": false,
     "layouts": {
         "lg": [
             {
-                "w": 23,
-                "h": 12,
-                "x": 21,
-                "y": 0,
+                "w": 11,
+                "h": 9,
+                "x": 10,
+                "y": 17,
                 "i": "action_1754579273173",
                 "moved": false,
                 "static": false,
@@ -194,9 +213,9 @@
             },
             {
                 "w": 23,
-                "h": 14,
+                "h": 26,
                 "x": 21,
-                "y": 12,
+                "y": 0,
                 "i": "action_1754579273173_vento_copy_7dho7xrr1diu9aqylb5vb",
                 "moved": false,
                 "static": false,
@@ -216,7 +235,7 @@
                 "w": 21,
                 "h": 4,
                 "x": 0,
-                "y": 0,
+                "y": 5,
                 "i": "value_1754584536847",
                 "moved": false,
                 "static": false,
@@ -226,7 +245,7 @@
                 "w": 21,
                 "h": 4,
                 "x": 0,
-                "y": 8,
+                "y": 13,
                 "i": "value_1754584536847_vento_copy_xkksfmpi42n8471ii3klt8",
                 "moved": false,
                 "static": false,
@@ -236,17 +255,17 @@
                 "w": 21,
                 "h": 4,
                 "x": 0,
-                "y": 4,
+                "y": 9,
                 "i": "value_1754584536847_vento_copy_83c96w5gamfkhrcfriu9q8",
                 "moved": false,
                 "static": false,
                 "isResizable": true
             },
             {
-                "w": 21,
-                "h": 14,
+                "w": 10,
+                "h": 9,
                 "x": 0,
-                "y": 12,
+                "y": 17,
                 "i": "action_1754585132838",
                 "moved": false,
                 "static": false,
@@ -261,71 +280,107 @@
                 "moved": false,
                 "static": false,
                 "isResizable": true
+            },
+            {
+                "w": 21,
+                "h": 5,
+                "x": 0,
+                "y": 0,
+                "i": "value_1756394123902",
+                "moved": false,
+                "static": false,
+                "isResizable": true
             }
         ],
         "md": [
             {
+                "w": 11,
+                "h": 6,
+                "x": 9,
+                "y": 16,
                 "i": "action_1754579273173",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 16,
+                "h": 22,
+                "x": 20,
+                "y": 0,
+                "i": "action_1754579273173_vento_copy_7dho7xrr1diu9aqylb5vb",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 15,
+                "h": 22,
+                "x": 36,
+                "y": 0,
+                "i": "action_1754583825617",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 20,
+                "h": 4,
+                "x": 0,
+                "y": 4,
+                "i": "value_1754584536847",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 20,
+                "h": 4,
+                "x": 0,
+                "y": 12,
+                "i": "value_1754584536847_vento_copy_xkksfmpi42n8471ii3klt8",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 20,
+                "h": 4,
+                "x": 0,
+                "y": 8,
+                "i": "value_1754584536847_vento_copy_83c96w5gamfkhrcfriu9q8",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 9,
+                "h": 6,
+                "x": 0,
+                "y": 16,
+                "i": "action_1754585132838",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 13,
+                "h": 22,
+                "x": 51,
+                "y": 0,
+                "i": "action_1754583825617_vento_copy_si3vkvga23ewb74dfedirf",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 20,
+                "h": 4,
                 "x": 0,
                 "y": 0,
-                "w": 15,
-                "h": 7,
-                "isResizable": true
-            },
-            {
-                "i": "action_1754579273173_vento_copy_7dho7xrr1diu9aqylb5vb",
-                "x": 15,
-                "y": 6,
-                "w": 15,
-                "h": 7,
-                "isResizable": true
-            },
-            {
-                "i": "action_1754583825617",
-                "x": 30,
-                "y": 12,
-                "w": 15,
-                "h": 7,
-                "isResizable": true
-            },
-            {
-                "i": "value_1754584536847",
-                "x": 0,
-                "y": 19,
-                "w": 30,
-                "h": 5,
-                "isResizable": true
-            },
-            {
-                "i": "value_1754584536847_vento_copy_xkksfmpi42n8471ii3klt8",
-                "x": 30,
-                "y": 23,
-                "w": 30,
-                "h": 5,
-                "isResizable": true
-            },
-            {
-                "i": "value_1754584536847_vento_copy_83c96w5gamfkhrcfriu9q8",
-                "x": 0,
-                "y": 28,
-                "w": 30,
-                "h": 5,
-                "isResizable": true
-            },
-            {
-                "i": "action_1754585132838",
-                "x": 30,
-                "y": 32,
-                "w": 15,
-                "h": 7,
-                "isResizable": true
-            },
-            {
-                "i": "action_1754583825617_vento_copy_si3vkvga23ewb74dfedirf",
-                "x": 45,
-                "y": 38,
-                "w": 15,
-                "h": 7,
+                "i": "value_1756394123902",
+                "moved": false,
+                "static": false,
                 "isResizable": true
             }
         ],
@@ -393,6 +448,14 @@
                 "w": 1,
                 "h": 7,
                 "isResizable": true
+            },
+            {
+                "i": "value_1756394123902",
+                "x": 0,
+                "y": 48,
+                "w": 2,
+                "h": 5,
+                "isResizable": true
             }
         ],
         "xs": [
@@ -458,6 +521,14 @@
                 "y": 43,
                 "w": 1,
                 "h": 7,
+                "isResizable": true
+            },
+            {
+                "i": "value_1756394123902",
+                "x": 0,
+                "y": 50,
+                "w": 1,
+                "h": 5,
                 "isResizable": true
             }
         ]

@@ -20,6 +20,7 @@ async function dbCredentials(req, res, next) {
         let dbName = (await API.get("/api/core/v1/keys/DB_NAME?token=" + getServiceToken())).data;
         let dbUser = (await API.get("/api/core/v1/keys/DB_USER?token=" + getServiceToken())).data;
         let dbPassword = (await API.get("/api/core/v1/keys/DB_PASSWORD?token=" + getServiceToken())).data;
+        let dbHost = (await API.get("/api/core/v1/keys/DB_HOST?token=" + getServiceToken())).data;
 
         if (!dbUser || !dbName || !dbPassword) {
             return res.json({
@@ -32,6 +33,7 @@ async function dbCredentials(req, res, next) {
         req.DB_NAME = dbName
         req.DB_USER = dbUser
         req.DB_PASSWORD = dbPassword
+        req.DB_HOST = dbHost
         next()
     } catch (err) {
         console.log(err)
@@ -46,9 +48,9 @@ async function dbCredentials(req, res, next) {
 export default Protofy("code", async (app: Application, context) => {
     app.get("/api/v1/mysql/alive", dbCredentials, async (req, res) => {
         try {
-            const { DB_NAME, DB_USER, DB_PASSWORD } = req as any // avoid type errors caused by express typing
+            const { DB_HOST, DB_NAME, DB_USER, DB_PASSWORD } = req as any // avoid type errors caused by express typing
             console.log({ DB_NAME, DB_USER, DB_PASSWORD })
-            const db = new Db(DB_USER?.value, DB_PASSWORD?.value, DB_NAME?.value)
+            const db = new Db(DB_HOST?.value, DB_USER?.value, DB_PASSWORD?.value, DB_NAME?.value)
             const connected = await db.connect();
             if (!connected) {
                 return res.json({
@@ -74,10 +76,11 @@ export default Protofy("code", async (app: Application, context) => {
     })
     app.get("/api/v1/mysql/tables", dbCredentials, async (req, res) => {
         try {
-            const { DB_NAME, DB_USER, DB_PASSWORD } = req as any // avoid type errors caused by express typing
-            console.log({ DB_NAME, DB_USER, DB_PASSWORD })
-            const db = new Db(DB_USER?.value, DB_PASSWORD?.value, DB_NAME?.value)
+            const { DB_HOST, DB_NAME, DB_USER, DB_PASSWORD } = req as any // avoid type errors caused by express typing
+            console.log({ DB_HOST, DB_NAME, DB_USER, DB_PASSWORD })
+            const db = new Db(DB_HOST?.value, DB_USER?.value, DB_PASSWORD?.value, DB_NAME?.value)
             const connected = await db.connect();
+
             if (!connected) {
                 return res.json({
                     error: "-", // avoid giving to much information about the internal error
@@ -103,13 +106,14 @@ export default Protofy("code", async (app: Application, context) => {
     })
 
     app.get("/api/v1/mysql/tables/:tableId", dbCredentials, async (req, res) => {
-        const { DB_NAME, DB_USER, DB_PASSWORD } = req as any // avoid type errors caused by express typing
         const tableId = req.params.tableId
         const page = Number(req.query.page) || 1
 
-        console.log({ DB_NAME, DB_USER, DB_PASSWORD })
-        const db = new Db(DB_USER?.value, DB_PASSWORD?.value, DB_NAME?.value)
+        const { DB_HOST, DB_NAME, DB_USER, DB_PASSWORD } = req as any // avoid type errors caused by express typing
+        console.log({ DB_HOST, DB_NAME, DB_USER, DB_PASSWORD })
+        const db = new Db(DB_HOST?.value, DB_USER?.value, DB_PASSWORD?.value, DB_NAME?.value)
         const connected = await db.connect();
+
         if (!connected) {
             return res.json({
                 error: "-", // avoid giving to much information about the internal error
@@ -129,13 +133,14 @@ export default Protofy("code", async (app: Application, context) => {
 
 
     app.get("/api/v1/mysql/tables/:tableId/:field/:fieldValue", dbCredentials, async (req, res) => {
-        const { DB_NAME, DB_USER, DB_PASSWORD } = req as any // avoid type errors caused by express typing
         const { tableId, field, fieldValue } = req.params
         const page = Number(req.query.page) || 1
 
-        console.log({ DB_NAME, DB_USER, DB_PASSWORD })
-        const db = new Db(DB_USER?.value, DB_PASSWORD?.value, DB_NAME?.value)
+        const { DB_HOST, DB_NAME, DB_USER, DB_PASSWORD } = req as any // avoid type errors caused by express typing
+        console.log({ DB_HOST, DB_NAME, DB_USER, DB_PASSWORD })
+        const db = new Db(DB_HOST?.value, DB_USER?.value, DB_PASSWORD?.value, DB_NAME?.value)
         const connected = await db.connect();
+
         if (!connected) {
             return res.json({
                 error: "-", // avoid giving to much information about the internal error
@@ -154,13 +159,14 @@ export default Protofy("code", async (app: Application, context) => {
     })
 
     app.post("/api/v1/mysql/tables/join", dbCredentials, async (req, res) => {
-        const { DB_NAME, DB_USER, DB_PASSWORD } = req as any // avoid type errors caused by express typing
         const { table, join_table, field, join_field, field_value } = req.body
         const page = Number(req.query.page) || 1
 
-        console.log({ DB_NAME, DB_USER, DB_PASSWORD })
-        const db = new Db(DB_USER?.value, DB_PASSWORD?.value, DB_NAME?.value)
+        const { DB_HOST, DB_NAME, DB_USER, DB_PASSWORD } = req as any // avoid type errors caused by express typing
+        console.log({ DB_HOST, DB_NAME, DB_USER, DB_PASSWORD })
+        const db = new Db(DB_HOST?.value, DB_USER?.value, DB_PASSWORD?.value, DB_NAME?.value)
         const connected = await db.connect();
+
         if (!connected) {
             return res.json({
                 error: "-", // avoid giving to much information about the internal error

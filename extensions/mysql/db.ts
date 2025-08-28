@@ -3,10 +3,9 @@ import mysql from 'mysql2'
 export class Db {
     connection: any
 
-    constructor(dbUser: string, dbPassword: string, dbName: string) {
-        let host = "localhost" // this will change in the future
+    constructor(dbHost: string, dbUser: string, dbPassword: string, dbName: string) {
         this.connection = mysql.createConnection({
-            host: host,
+            host: dbHost,
             user: dbUser,
             password: dbPassword,
             database: dbName
